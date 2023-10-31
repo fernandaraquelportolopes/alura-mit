@@ -14,6 +14,14 @@ for (contador = 0; contador < listaDeTecla.length; contador++){
     tecla[contador].onclick = function(){
         tocaSom('#som_tecla_clap')
     };
+    tecla.onkeydown = function(evento){
+        if(evento.code === 'space'){
+
+    tecla.classList.add('ativa');
+ }
+        tecla.onkeyup = function(){
+            tecla.classList.remove('ativa');
+    }
 }
 
 
