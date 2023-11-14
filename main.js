@@ -1,12 +1,13 @@
-function tocaSom(idElementoAudio){
-    document.querySelector(idElementoAudio).play('');   
+function tocaSom(seletorAudio){
+    const elemento = document.querySelector(seletorAudio).play('');   
 }
 
 const ListaDeTeclas = document.querySelectorAll('.tecla')
 
 
 
-for (contador = 0; contador < listaDeTecla.length; contador++){
+for (contador = 0; contador < listaDeTecla.length; contador = contados + 1;
+    {
     constInstrumento = ListaDeTeclas[contador].clssList[1];
     const tecla = ListaDeTeclas[contador];
 
@@ -22,6 +23,15 @@ for (contador = 0; contador < listaDeTecla.length; contador++){
         tecla.onkeyup = function(){
             tecla.classList.remove('ativa');
     }
+     tecla.onkeydown = function(evento){
+        if(evento.code === 'Space'||evento.code === 'Enter'){
+        tecla.classList.add('ativa');
+        }
+        
+            }
+        tecla.onkeydown = function(){
+            tecla.classList.remove('ativa');
+     }
 }
 
 
